@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+  My Blog
+{% endblock %}
+
+{% block css_file %}
+  <link rel="stylesheet" href="{% static 'blog/post.css' %}"/>
+  <link rel="stylesheet" href="{% static 'blog/index.css' %}"/>
+{% endblock %}
+
+{% block content %}
+
+
+  <section id="welcome">
+    <header>
+      <img src="{% static 'blog/images/4.jpg' %} " alt='Test Blog'/>
+      <h2>Test Blog</h2>
+    </header>
+    <p>Hello text text text</p>
+  </section>
+
+  <section id="latest-posts">
+    <h2>My latest Thoughts</h2>
+    <ul>
+      {% for post in posts %}
+        {% include 'blog/includes/post.html' %}
+      {% endfor %}
+    </ul>
+  </section>
+
+<section id="about">
+  <h2>About</h2>
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+  </p>
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+  </p>
+</section>
+{% endblock %}
