@@ -1,5 +1,7 @@
 from pathlib import Path
 
+from django.conf.global_settings import SESSION_COOKIE_AGE
+
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 SECRET_KEY = 'django-insecure-la(i!bimbwwy1p@yy6tn$*@=x53#n)!qm)(7e+ns+&@n$@s$i5'
